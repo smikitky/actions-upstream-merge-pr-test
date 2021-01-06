@@ -1,0 +1,16 @@
+name: 'Merge Upstream PR'
+description: 'Make a pull request to sync with an upstream branch'
+inputs:
+  upstream:  # id of input
+    description: 'Upstream repository URL'
+    required: true
+  upstreamBranch:
+    required: false
+    default: master
+  targetBranch:
+    required: false
+    default: master
+outputs:
+runs:
+  using: 'node12'
+  main: 'index.js'
